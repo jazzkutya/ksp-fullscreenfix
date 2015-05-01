@@ -34,7 +34,7 @@ integrity of game cache in steam to restore the original file.
 
 ----------------------------------------------------------------------
 
-The exe file was created from the source with 32bit strayberry perl 5.20.2
+The exe file was created from the source with 32bit strawberry perl 5.20.2
 on windows 7, using Par::Packer (http://search.cpan.org/~rschupp/PAR-Packer-1.025/)
 
 command line:
