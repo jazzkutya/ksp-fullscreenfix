@@ -15,6 +15,12 @@ my $kspversions=+{
 		check_addr=>0x101c,
 		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
 	},
+	840=>+{
+		version=>'1.0.0',
+		addr=>0x109c,
+		check_addr=>0x101c,
+		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
+	},
 	705=>+{
 		version=>'0.90.0',
 		addr=>0x1098,
