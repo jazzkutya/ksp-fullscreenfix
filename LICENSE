@@ -1,5 +1,17 @@
 
-Usage of this software and it's source code is governed by the ARTISTIC LICENSE, same as perl itself.
+This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+
+See http://www.perl.com/perl/misc/Artistic.html
+
+A Copy of the Perl 5 License is included below.
+
+ Perl5 is Copyright (C) 1993-2005, by Larry Wall and others.
+
+It is free software; you can redistribute it and/or modify it under the terms of either:
+
+a) the GNU General Public License as published by the Free Software Foundation; either version 1, or (at your option) any later version, or
+
+b) the "Artistic License". 
 
 The "Artistic License"
 
