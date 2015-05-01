@@ -32,3 +32,10 @@ NOTE KSP will not run in the background after the modification
 but you can restore KSP_Data\mainData from the backup anytime, or verify
 integrity of game cache in steam to restore the original file.
 
+----------------------------------------------------------------------
+
+The exe file was created from the source with 32bit strayberry perl 5.20.2
+on windows 7, using Par::Packer (http://search.cpan.org/~rschupp/PAR-Packer-1.025/)
+
+command line:
+pp -o ksp-fullscreenfix.exe ksp-fullscreenfix.pl
