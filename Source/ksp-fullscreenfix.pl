@@ -7,28 +7,25 @@ our $VERSION='0.1';
 
 my $target='KSP_Data/mainData';
 my $backup='KSP_Data/mainData-ksp-fullscreenfix-backup';
-
-my $kspversions=+{
-	830=>+{
-		version=>'1.0.0',
+my $kspversions;
+{
+	my $v1_0_x=+{
 		addr=>0x109c,
 		check_addr=>0x101c,
 		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
-	},
-	840=>+{
-		version=>'1.0.0',
-		addr=>0x109c,
-		check_addr=>0x101c,
-		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
-	},
-	705=>+{
-		version=>'0.90.0',
-		addr=>0x1098,
-		check_addr=>0x1018,
-		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
-	}
-};
-
+	};
+	$kspversions=+{
+		830=>+{version=>'1.0.0',%$v1_0_x},
+		840=>+{version=>'1.0.1',%$v1_0_x},
+		842=>+{version=>'1.0.2',%$v1_0_x},
+		705=>+{
+			version=>'0.90.0',
+			addr=>0x1098,
+			check_addr=>0x1018,
+			check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
+		}
+	};
+}
 
 print "$/This is KSP exclusive fullscreen fix $VERSION$/$/";
 
