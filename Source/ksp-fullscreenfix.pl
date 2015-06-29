@@ -17,7 +17,8 @@ my $kspversions;
 	$kspversions=+{
 		830=>+{version=>'1.0.0',%$v1_0_x},
 		840=>+{version=>'1.0.1',%$v1_0_x},
-		842=>+{version=>'1.0.4',%$v1_0_x},
+		842=>+{version=>'1.0.2',%$v1_0_x},
+		861=>+{version=>'1.0.4',%$v1_0_x},
 		705=>+{
 			version=>'0.90.0',
 			addr=>0x1098,
