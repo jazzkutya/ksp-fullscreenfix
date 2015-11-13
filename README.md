@@ -1,4 +1,4 @@
-#ksp-fullscreenfix v0.1050
+#ksp-fullscreenfix v0.1051
 
 Changes Kerbal Space Program to run in exclusive fullscreen mode on windows,
 when using default d3d9 renderer.
