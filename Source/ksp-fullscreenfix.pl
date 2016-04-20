@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-our $VERSION='0.1051';
+our $VERSION='0.1101';
 
 my $target='KSP_Data/mainData';
 my $backup='KSP_Data/mainData-ksp-fullscreenfix-backup';
@@ -14,6 +14,11 @@ my $kspversions;
 		check_addr=>0x101c,
 		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
 	};
+	my $v1_1_x=+{
+		addr=>0x4044,
+		check_addr=>0x3fb8,
+		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
+	};
 	$kspversions=+{
 		830=>+{version=>'1.0.0',%$v1_0_x},
 		840=>+{version=>'1.0.1',%$v1_0_x},
@@ -21,6 +26,8 @@ my $kspversions;
 		861=>+{version=>'1.0.4',%$v1_0_x},
 		1024=>+{version=>'1.0.5',%$v1_0_x},
 		1028=>+{version=>'1.0.5',%$v1_0_x},
+		1183=>+{version=>'1.1.0 prerelease 1183',%$v1_1_x},
+		1230=>+{version=>'1.1.0',%$v1_1_x},
 		705=>+{
 			version=>'0.90.0',
 			addr=>0x1098,
@@ -48,6 +55,9 @@ sub main {
 	unless (defined $build) {
 		print "ERROR: start this in a KSP Installation folder (where KSP.exe is)$/";
 		return;
+	}
+	if ($build>=1183) {
+		s/^KSP_Data/KSP_x64_Data/ for ($target,$backup);
 	}
 	my $conf=$kspversions->{$build};
 	die "build $build: unknown build" unless defined $conf;
