@@ -9,10 +9,10 @@ Since 0.90 KSP on windows does not use true (exclusive) fullscreen mode
 due to changes in unity. This causes screen tearing issues without aero
 (win7) and some loss of performance.
 
-*NEW* KSP versions above 1.1.0.1183 have both 32bit and 64bit mode.
+**NEW** KSP versions above 1.1.0.1183 have both 32bit and 64bit mode.
 This patcher modifies only the 64bit version for those KSP versions.
 
-*WARNING* since the public release of KSP 1.1 I can not alt-tab back into the game on Win7.
+**WARNING** since the public release of KSP 1.1 I can not alt-tab back into the game on Win7.
 Test this first on KSP main menu to know ahead if you will have any problems
 alt-tabbing out of KSP in the middle of a high-stake mission :)
 
