@@ -1,9 +1,9 @@
-#ksp-fullscreenfix v0.1101
+#ksp-fullscreenfix v0.1111
 
 Changes Kerbal Space Program to run in exclusive fullscreen mode on windows,
 when using default d3d9 renderer.
 
-http://forum.kerbalspaceprogram.com/threads/114935-KSP-1-00-and-0-90-windows-true-exclusive-fullscreen-shadowplay-and-gsync-solution
+http://forum.kerbalspaceprogram.com/index.php?/topic/103537-ksp-11x-10x-090-windows-true-exclusive-fullscreen-shadowplay-and-gsync-solution/
 
 Since 0.90 KSP on windows does not use true (exclusive) fullscreen mode
 due to changes in unity. This causes screen tearing issues without aero
