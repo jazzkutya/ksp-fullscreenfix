@@ -1,4 +1,4 @@
-#ksp-fullscreenfix v0.1111
+#ksp-fullscreenfix v0.1121
 
 Changes Kerbal Space Program to run in exclusive fullscreen mode on windows,
 when using default d3d9 renderer.
@@ -15,6 +15,7 @@ This patcher modifies only the 64bit version for those KSP versions.
 **WARNING** since the public release of KSP 1.1 I can not alt-tab back into the game on Win7.
 Test this first on KSP main menu to know ahead if you will have any problems
 alt-tabbing out of KSP in the middle of a high-stake mission :)
+seems to be working again since 1.1.1.
 
 This program modifies one file in Kerbal Space Program (KSP_Data\mainData)
 to make it use good old real fullscreen mode (exclusive fullscreen mode).
