@@ -1,4 +1,4 @@
-#ksp-fullscreenfix v0.1131
+#ksp-fullscreenfix v0.1201
 
 Changes Kerbal Space Program to run in exclusive fullscreen mode on windows,
 when using default d3d9 renderer.
@@ -17,7 +17,7 @@ Test this first on KSP main menu to know ahead if you will have any problems
 alt-tabbing out of KSP in the middle of a high-stake mission :)
 seems to be working again since 1.1.1.
 
-This program modifies one file in Kerbal Space Program (KSP_Data\mainData)
+This program modifies one file in Kerbal Space Program (KSP_x64_Data\globalgamemanagers)
 to make it use good old real fullscreen mode (exclusive fullscreen mode).
 
 NOTE This means KSP will not run in the background.
@@ -34,10 +34,10 @@ Run it from there and read what it says in a console window.
 You can delete ksp-fullscreenfix.pl from your KSP install folder after it
 made the modification.
 
-It will make a backup file in KSP_Data: mainData-ksp-fullscreenfix-backup
+It will make a backup file in KSP_Data: globalgamemanagers-ksp-fullscreenfix-backup
 
 NOTE KSP will not run in the background after the modification
-but you can restore KSP_Data\mainData from the backup anytime, or verify
+but you can restore KSP_x64_Data\globalgamemanagers from the backup anytime, or verify
 integrity of game cache in steam to restore the original file.
 
 ----------------------------------------------------------------------

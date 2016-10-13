@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-our $VERSION='0.1131';
+our $VERSION='0.1201';
 
 my $target='KSP_Data/mainData';
 my $backup='KSP_Data/mainData-ksp-fullscreenfix-backup';
@@ -24,6 +24,12 @@ my $kspversions;
 		check_addr=>0x3e98,
 		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
 	};
+	my $v1_2=+{
+		addr=>0x10e0,
+		check_addr=>0x1024,
+		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
+		target=>'globalgamemanagers',
+	};
 	$kspversions=+{
 		830=>+{version=>'1.0.0',%$v1_0_x},
 		840=>+{version=>'1.0.1',%$v1_0_x},
@@ -36,6 +42,7 @@ my $kspversions;
 		1250=>+{version=>'1.1.1',%$v1_1_x},
 		1260=>+{version=>'1.1.2',%$v1_1_2},
 		1289=>+{version=>'1.1.3',%$v1_1_2},
+		1586=>+{version=>'1.2',%$v1_2},
 		705=>+{
 			version=>'0.90.0',
 			addr=>0x1098,
@@ -64,10 +71,14 @@ sub main {
 		print "ERROR: start this in a KSP Installation folder (where KSP.exe is)$/";
 		return;
 	}
+	my $conf=$kspversions->{$build};
+	if (defined $conf->{'target'}) {
+		$target="KSP_Data/$conf->{target}";
+		$backup="KSP_Data/$conf->{target}-ksp-fullscreenfix-backup";
+	}
 	if ($build>=1183) {
 		s/^KSP_Data/KSP_x64_Data/ for ($target,$backup);
 	}
-	my $conf=$kspversions->{$build};
 	die "build $build: unknown build" unless defined $conf;
 	print "Detected KSP version: $conf->{version}$/";
 	my $fixed=check($conf);
