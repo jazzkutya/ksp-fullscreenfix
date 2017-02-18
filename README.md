@@ -15,8 +15,8 @@ This patcher modifies only the 64bit version for those KSP versions.
 **WARNING** since the public release of KSP 1.1 I can not alt-tab back into the game on Win7.
 Test this first on KSP main menu to know ahead if you will have any problems
 alt-tabbing out of KSP in the middle of a high-stake mission :)
-seems to be working again since 1.1.1.
-1.2.2 on Win7: minor glitch in main menu:  menu text becomes hidden after alt-tabbing and back
+seems to be working again since 1.1.1.  
+1.2.2 on Win7: minor glitch in main menu:  menu text becomes hidden after alt-tabbing and back  
 did not try playing actual game
 
 This program modifies one file in Kerbal Space Program (KSP_x64_Data\globalgamemanagers)
