@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-our $VERSION='0.1221';
+our $VERSION='0.1431';
 
 my $target='KSP_Data/mainData';
 my $backup='KSP_Data/mainData-ksp-fullscreenfix-backup';
@@ -30,6 +30,12 @@ my $kspversions;
 		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
 		target=>'globalgamemanagers',
 	};
+	my $v1_4=+{
+		addr=>0x1180,
+		check_addr=>0x1024,
+		check_string=>"\x05\x00\x00\x00Squad\x00\x00\x00\x14\x00\x00\x00Kerbal Space Program",
+		target=>'globalgamemanagers',
+	};
 	$kspversions=+{
 		830=>+{version=>'1.0.0',%$v1_0_x},
 		840=>+{version=>'1.0.1',%$v1_0_x},
@@ -45,6 +51,7 @@ my $kspversions;
 		1586=>+{version=>'1.2',%$v1_2},
 		1604=>+{version=>'1.2.1',%$v1_2},
 		1622=>+{version=>'1.2.2',%$v1_2},
+		2152=>+{version=>'1.4.3',%$v1_4},
 		705=>+{
 			version=>'0.90.0',
 			addr=>0x1098,
@@ -146,6 +153,10 @@ sub kspversion {
 		open my $fh,'<',$fn or die "$fn: $!";
 		my $line=<$fh>;
 		chomp $line;
+		if ($line eq '[config]') {
+			$line=<$fh>;
+			chomp $line;
+		}
 		die "$fn: $line: could not parse build id" unless $line=~/^build id \= (\d+)$/;
 		return 0+$1;
 	}
