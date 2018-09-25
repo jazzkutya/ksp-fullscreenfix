@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-our $VERSION='0.1431';
+our $VERSION='0.1451';
 
 my $target='KSP_Data/mainData';
 my $backup='KSP_Data/mainData-ksp-fullscreenfix-backup';
@@ -52,6 +52,7 @@ my $kspversions;
 		1604=>+{version=>'1.2.1',%$v1_2},
 		1622=>+{version=>'1.2.2',%$v1_2},
 		2152=>+{version=>'1.4.3',%$v1_4},
+		2243=>+{version=>'1.4.5',%$v1_4},
 		705=>+{
 			version=>'0.90.0',
 			addr=>0x1098,
